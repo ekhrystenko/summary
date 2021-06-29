@@ -50,7 +50,7 @@
                         <li><i class="fas fa-envelope-square"></i>swallow1991@gmail.com</li>
                         <li><i class="fas fa-birthday-cake"></i>05.08.1991р.</li>
                         <li><i class="fas fa-map-marker-alt"></i>Бориспіль, Україна</li>
-                        <li><i class="fab fa-instagram"></i><a href="https://www.instagram.com/eugene_x">Instagram</a></li>
+                        <li><i class="fab fa-instagram"></i><a href="https://www.instagram.com/eugene_xp">Instagram</a></li>
                         <li><i class="fab fa-facebook"></i><a href="https://www.facebook.com/e.khrystenko">Facebook</a></li>
                     </ul>
                 </div>
@@ -61,7 +61,7 @@
                 </div>
                 <div class="works">
                     <ul>
-                        <li><a href="https://github.com/eugene-kh?tab=repositories">https://github.com/eugene-kh</a></li>
+                        <li><a href="https://github.com/ekhrystenko?tab=repositories">https://github.com/eugene-kh</a></li>
                     </ul>
                 </div>
             </div>
