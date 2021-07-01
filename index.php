@@ -87,8 +87,8 @@
                     <?php if (isset($show_errors)){ ?>
                         <div class="alert alert-danger"><?php echo $show_errors ?></div>
                     <?php }
-                        if (isset($_SESSION['complete'])){ ?>
-                        <div class="alert alert-success"><?php echo $_SESSION['complete']; unset($_SESSION['complete']) ?></div>
+                        if (isset($_GET['showmsg']) && $_GET['showmsg'] == true){ ?>
+                        <div class="alert alert-success"><?php echo 'Повідомлення успішно відправлено!' ?></div>
                     <?php } ?>
 
                     <div class="mb-3">

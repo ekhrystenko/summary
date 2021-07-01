@@ -1,5 +1,4 @@
 <?php
-session_start();
 if ( isset($_POST['send-form']) ){
 
     $title = strip_tags(trim($_POST['title']));
@@ -11,7 +10,7 @@ if ( isset($_POST['send-form']) ){
         $errors[] = 'Напишіть заголовок!';
     } elseif ( $message == '' ){
         $errors[] = 'Напишіть Ваше повідомлення!';
-    } elseif ( mb_strlen($message) < 6){
+    } elseif ( mb_strlen($message) < 5){
         $errors[] = 'Напишіть повідомлення не менше 6 символів!';
     } elseif ( mb_strlen($message) > 150){
         $errors[] = 'Ваше повідомлення перевищує 150 символів!';
@@ -31,10 +30,16 @@ if ( isset($_POST['send-form']) ){
         $complete = fopen('https://api.telegram.org/'.$token.'/sendMessage?chat_id='.$chat_id.'&parse_mode=html&text='.rawurlencode($txt), 'r');
 
         if ($complete) {
-            $_SESSION['complete'] = 'Повідомлення відправлено успішно!';
+            $file = 'message.txt';
+            $file = fopen($file, "a");
+            $date = date('d.m.Y H:i:s');
+            $text = $date . "\n" . $title . "\n" . $message;
+            $result = fwrite($file, $text . "\n\n" . "**********" . "\n");
+            unset($result);
+            header('Location:'.$_SERVER['PHP_SELF'].'?showmsg=true');
         }
+
     } else {
         $show_errors = array_shift($errors);
     }
 }
-?>
